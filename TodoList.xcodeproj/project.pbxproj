@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		F0CBF13E246919BF00F71478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF13D246919BF00F71478 /* AppDelegate.swift */; };
 		F0CBF140246919BF00F71478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF13F246919BF00F71478 /* SceneDelegate.swift */; };
-		F0CBF142246919BF00F71478 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF141246919BF00F71478 /* ViewController.swift */; };
 		F0CBF145246919BF00F71478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CBF143246919BF00F71478 /* Main.storyboard */; };
 		F0CBF147246919C200F71478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CBF146246919C200F71478 /* Assets.xcassets */; };
 		F0CBF14A246919C200F71478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CBF148246919C200F71478 /* LaunchScreen.storyboard */; };
 		F0CBF155246919C300F71478 /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF154246919C300F71478 /* TodoListTests.swift */; };
 		F0CBF160246919C300F71478 /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF15F246919C300F71478 /* TodoListUITests.swift */; };
+		F0CBF16E24691DCE00F71478 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF16D24691DCE00F71478 /* ToDoListTableViewController.swift */; };
+		F0CBF1B22469364F00F71478 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0CBF1B02469364F00F71478 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		F0CBF13A246919BF00F71478 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CBF13D246919BF00F71478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CBF13F246919BF00F71478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0CBF141246919BF00F71478 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0CBF144246919BF00F71478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0CBF146246919C200F71478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0CBF149246919C200F71478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		F0CBF15B246919C300F71478 /* TodoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CBF15F246919C300F71478 /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		F0CBF161246919C300F71478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0CBF16D24691DCE00F71478 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
+		F0CBF1B12469364F00F71478 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,10 @@
 		F0CBF13C246919BF00F71478 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				F0CBF1AE2469361C00F71478 /* Controller */,
 				F0CBF13D246919BF00F71478 /* AppDelegate.swift */,
 				F0CBF13F246919BF00F71478 /* SceneDelegate.swift */,
-				F0CBF141246919BF00F71478 /* ViewController.swift */,
+				F0CBF1AF2469362600F71478 /* Data Model */,
 				F0CBF143246919BF00F71478 /* Main.storyboard */,
 				F0CBF146246919C200F71478 /* Assets.xcassets */,
 				F0CBF148246919C200F71478 /* LaunchScreen.storyboard */,
@@ -126,6 +129,22 @@
 				F0CBF161246919C300F71478 /* Info.plist */,
 			);
 			path = TodoListUITests;
+			sourceTree = "<group>";
+		};
+		F0CBF1AE2469361C00F71478 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0CBF16D24691DCE00F71478 /* ToDoListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0CBF1AF2469362600F71478 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0CBF1B02469364F00F71478 /* DataModel.xcdatamodeld */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0CBF142246919BF00F71478 /* ViewController.swift in Sources */,
 				F0CBF13E246919BF00F71478 /* AppDelegate.swift in Sources */,
+				F0CBF1B22469364F00F71478 /* DataModel.xcdatamodeld in Sources */,
 				F0CBF140246919BF00F71478 /* SceneDelegate.swift in Sources */,
+				F0CBF16E24691DCE00F71478 /* ToDoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +610,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F0CBF1B02469364F00F71478 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F0CBF1B12469364F00F71478 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = F0CBF1B12469364F00F71478 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F0CBF132246919BF00F71478 /* Project object */;
 }
